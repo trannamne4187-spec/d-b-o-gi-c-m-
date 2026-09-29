@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sổ Mơ Giải Mã Giấc Mơ</title>
+</head>
+<body>
+
+    <main>
+        <h1 id="main-title">Trang Web Giải Mã Giấc Mơ & Con Số May Mắn</h1>
+        
+        <div>
+            <h2>Giới thiệu chung</h2>
+            <p>Chào mừng bạn đến với trang tra cứu sổ mơ lô đề dân gian. Dưới đây là tổng hợp 20 trường hợp giấc mơ phổ biến nhất kèm theo các con số tài lộc tương ứng để bạn tham khảo.</p>
+        </div>
+
+        <div>
+            <h2>Tra cứu nhanh giấc mơ</h2>
+            <p>Nhập từ khóa bên dưới để lọc nhanh nội dung:</p>
+            <input type="text" id="searchInput" placeholder="Nhập từ khóa (vd: mưa, rắn, ông bà...)" onkeyup="filterDreams()">
+            <br><br>
+
+            <!-- Danh sách chứa 20 trường hợp giấc mơ -->
+            <ul id="dreamList">
+                <li>Nằm mơ thấy ông bà — Số: 17 - 18</li>
+                <li>Nằm mơ thấy trời mưa lớn — Số: 07</li>
+                <li>Nằm mơ thấy rắn bò vào nhà — Số: 32 - 42</li>
+                <li>Nằm mơ thấy tiền bạc — Số: 33 - 52</li>
+                <li>Nằm mơ thấy người chết sống lại — Số: 65 - 87</li>
+                <li>Nằm mơ thấy lửa cháy — Số: 27 - 72</li>
+                <li>Nằm mơ thấy cá bơi trong nước — Số: 79 - 01</li>
+                <li>Nằm mơ thấy mèo nhà — Số: 14 - 41</li>
+                <li>Nằm mơ thấy chó cắn — Số: 29 - 93</li>
+                <li>Nằm mơ thấy rụng răng — Số: 31 - 32</li>
+                <li>Nằm mơ thấy lúa chín — Số: 12 - 79</li>
+                <li>Nằm mơ thấy ăn uống cùng bạn bè — Số: 53 - 86</li>
+                <li>Nằm mơ thấy bay trên không trung — Số: 47 - 74</li>
+                <li>Nằm mơ thấy đám cưới — Số: 09 - 20</li>
+                <li>Nằm mơ thấy đánh nhau chảy máu — Số: 00 - 31</li>
+                <li>Nằm mơ thấy đi xe máy — Số: 42 - 55</li>
+                <li>Nằm mơ thấy em bé sơ sinh — Số: 09 - 90</li>
+                <li>Nằm mơ thấy nhà mới xây — Số: 14 - 16</li>
+                <li>Nằm mơ thấy ghen tuông — Số: 09 - 49</li>
+                <li>Nằm mơ thấy mua sắm quần áo — Số: 06 - 46</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Hình ảnh minh họa giấc mơ</h2>
+            <!-- Đảm bảo có ít nhất 3 hình ảnh -->
+            <div>
+                <img src="https://picsum.photos/id/1015/300/200" alt="Phong cảnh thiên nhiên mưa gió" width="250">
+                <img src="https://picsum.photos/id/1025/300/200" alt="Hình ảnh động vật tượng trưng" width="250">
+                <img src="https://picsum.photos/id/1062/300/200" alt="Hình ảnh tài lộc cuộc sống" width="250">
+            </div>
+        </div>
+
+        <div>
+            <h2>Nguồn tham khảo bên ngoài</h2>
+            <!-- Liên kết đến nguồn bên ngoài -->
+            <p>Bạn có thể xem thêm các tài liệu giải mã chi tiết tại <a href="https://vi.wikipedia.org/wiki/Gi%E1%BA%A5c_m%C6%A1" target="_blank">Wikipedia về Giấc Mơ</a>.</p>
+        </div>
+
+        <div>
+            <a href="#main-title">Quay lại đầu trang</a>
+        </div>
+    </main>
+
+    <!-- Script tìm kiếm nhanh đơn giản -->
+    <script>
+        function filterDreams() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let items = document.getElementById('dreamList').getElementsByTagName('li');
+
+            for (let i = 0; i < items.length; i++) {
+                let text = items[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
